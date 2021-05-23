@@ -1,0 +1,527 @@
+// Base styling
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+body {
+  padding: 0;  
+  margin: 0;
+  color: var(--base-txt-color);
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background: var(--body-bg);
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+// headings ------------
+h1,h2,h3,h5,h6 {
+  margin: 0 0 .5em;
+  color: var(--heading-color);
+}
+
+// links ---------------
+a {
+  color: var(--link-color);
+}
+
+
+// app splash screen -------
+//loading page if something goes wrong
+.app-splash {
+  position: fixed;
+  background: #fff;
+  color: #777;
+  display: flex;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .app-logo {
+    width: 180px;
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+
+// helper classes ---------
+.calign {
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.6em;
+}
+
+.extra-large-text{
+  font-size: 2em;
+}
+
+.brand-color {
+  color: var(--brand-color);
+}
+
+// generic-entry ------------
+.generic-entry {
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  margin-bottom: .5em;
+  padding: 1em;
+  background: #fff;
+}
+
+// root ---------------
+//ething gets put in this div which is as if the full page
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  overflow: hidden;
+}
+
+// all page --------------------
+.page-content {
+  position: absolute;
+  top: var(--app-header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  padding: 1em;
+  &.no-pad {
+    padding: 0;
+  }
+}
+
+.page-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// sign in + sign up pages -----------------------
+.signinup-box,
+.signup-box {  
+  max-width: 400px;
+  margin-top: -7em;
+  text-align: center;
+}
+
+//logo on sign up pg
+.signinup-logo {
+  width: 190px;
+  margin-bottom: -2em;
+}
+
+// guide page --------------------------------
+.guide-step {
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 600px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+//va-hike card styles ---------------------------
+//grid for hike and favourites page
+.hike-grid,
+.fav-grid{
+  display: flex;
+  flex-wrap: wrap;
+  .hike-card, 
+  .fav-card{
+    width: calc(33.3% - 1em);
+    margin: 0.5em;
+  }
+}
+
+
+//HIKE page ---------------------------------------
+.hike-h1, 
+.fav-h1{
+  text-align: center;
+  font-family: var(--base-heading-font);
+}
+
+//hike header 2
+.hike-header-section, 
+.fav-header-section{
+  padding: 10px;
+  width: 99%;
+  border-bottom: 1px solid var(--heading-color);
+}
+
+//hike grid below header
+.hike-grid{
+  margin-top: 5px;
+}
+
+//diskonnect hike dialog
+.disk-dialog {
+  --width: 70%;
+}
+
+.disk-dialog::part(body){
+  margin-top: -4em;
+}
+
+//HOME page styles ------------------------------------
+
+//page container
+.pg-container{
+  width: 99%;
+  //min-height: calc(100vh - 70px);
+  position: relative;
+  margin-left: 20px;
+  margin-right:20px;
+  margin-top: 20px;
+  
+}
+
+.home-box, .home-pic-box{
+  position:absolute;
+}
+
+//home text box
+.home-box{
+  //background-color: blue;    
+  background-color: var(--body-bg);  
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  object-fit: cover;
+  width:49%; 
+  margin-top: 6em;
+}
+
+//home picture
+.home-pic-box{
+  right: 0;
+  margin-right: 30px;
+  border-radius: 20px;  
+  width:57%; 
+  object-fit: cover;
+}
+//search hikes btn
+.home-search-hikes{
+  border-radius: 50px;  
+}
+
+.bottom-home-p{
+  margin-top: -1em;
+  padding-left: 9em;
+  margin-bottom: 1em;
+  //padding: 1em;
+}
+
+.top-home-p{
+  padding-left: 2em;
+}
+
+//home footer
+.home-footer{
+  background: var(--brand-pink);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: var(--app-footer-height);
+  display: flex;
+  z-index: 8;
+  align-items: center;
+}
+
+/*footer text*/
+.footer-main{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5em;
+}
+
+/*footer icons*/
+.footer-right{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-right: 0.5em;
+}
+
+//hike page -------------------------------------
+.length-dropdown, 
+.time-dropdown,
+.skill-lev-dropdown, 
+.star-tablet-dropdown{
+  display: none;
+}
+
+.clear-btn{
+  display: inline-block;
+}
+
+
+
+//profile page -----------------------------------
+.edit-profile-btn{
+  color: var(--brand-pink);
+  background-color: var(--brand-pink);;
+}
+
+//About page -------------------------------------
+.about-lg-box{
+  display: flex;
+  flex-direction: column;
+    div{
+      width: 100%;
+      padding: 1em;
+    }
+}
+
+//section 1
+.section-1-mission{
+  height: 30%;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+    div{
+      flex-wrap: wrap;  
+      margin: 0em; 
+    }
+    h1{
+      text-align: center;
+    }
+}
+
+
+//actual pic
+.about-hike-pic{
+  border-radius: 8px;
+  //margin-right: 10em;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parag{
+  font-size: var(--base-middle-parag-weight);
+}
+
+//section 2
+.section-2-team{
+  padding-top: 3em;
+  background-color: var(--brand-color);
+  h1{
+    text-align: center;
+    color: var(--body-bg);
+    padding-top: 1em;
+  }
+  p{
+    
+    color: var(--body-bg);
+  }
+}
+
+.team-descrip{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  div{ 
+  width: 33%;
+  padding: 1em;
+  //border: .5px solid black;
+  margin: 1em;
+  text-align: center;
+  }
+
+  img{
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
+//section 3 
+.section-3-about{
+  text-align: center;
+  p{
+    padding-top: 1em;
+  }
+
+}
+
+.about-donate-btn::part(base){
+  background-color: var(--brand-pink);
+  border-color:var(--brand-pink);
+  color: var(--base-txt-color);
+}
+
+//ADD HIKE page ----------------------------------
+.form-align{
+  margin-top: 4em;
+
+  h1{
+    text-align: center;
+  }
+}
+
+//div that allows to be centered in page - profile page
+//adapted from
+//Fitzgerald, Anna. 2021. "11 Ways To Center Div Or Text In Div In CSS". Blog.Hubspot.Com. 
+//https://blog.hubspot.com/website/center-div-css#:~:text=To%20center%20a%20div%20horizontally%20on%20a%20page%2C%20simply%20set,equally%20between%20the%20two%20margins.
+.profile-outer-div, 
+.form-align{
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  padding: 1px;
+}
+
+// RESPONSIVE - TABLET --------------------------------------
+@media all and (max-width: 768px){ 
+
+  //HOME PAGE -------------------------
+//page container remove margins
+.pg-container{
+  margin-left: 0px;
+  margin-right:0px;
+  margin-top: 0px;
+  
+}
+
+//home text box
+.home-box{
+  width:90%; 
+  margin-top: 2.5em;
+  margin-right: 2em;
+}
+
+//home picture
+.home-pic-box{
+  margin-right: 0px;
+  margin-left: -10px;
+  border-radius: 1px;  
+  width:110%;
+  top: 15em;
+}
+
+.extra-large-text{
+  //reduce size due to smaller screen real estate
+  font-size: 1.6em;
+}
+
+  .signinup-box {
+    width: 90%;
+    max-width: none;
+  }
+
+  //footer icons on home page
+  .footer-right sl-icon{
+    display: none;
+  }
+
+  //hike page
+  .length-dropdown, 
+  .time-dropdown, 
+  .skill-lev-dropdown, 
+  .star-tablet-dropdown{
+    display: block;
+  }
+  
+  //hide full screen length/ time
+  .length-full-screen, 
+  .time-full-screen, 
+  .skill-full-screen,
+  .stars-section{
+    display: none;
+  }
+
+  //ABOUT PAGE -------------------------
+  .team-descrip{
+    img{
+      width: 130px;
+      height: 130px;
+    }
+
+    p{
+      font-size: 0.9em;
+    }
+  }
+
+}
+
+
+// RESPONSIVE - MOBILE -------------------
+// iPhone 6/7/8 Plus size
+@media all and (max-width: 414px){ 
+
+//HOME PAGE -------------------------
+//page container remove margins
+.pg-container{
+  margin-left: 0px;
+  margin-right:0px;
+  margin-top: 0px;
+  
+}
+
+//home picture
+.home-pic-box{
+  top: 13em;
+}
+
+.extra-large-text{
+  //reduce size due to smaller screen real estate
+  font-size: 1.1em;
+}
+
+//va-hike card styles ---------------------
+//grid for hike and favourites page
+.hike-grid,
+.fav-grid{
+  flex-direction: column;
+  .hike-card, 
+  .fav-card{
+    width: calc(99.9% - 1em);
+  }
+}
+
+//hikes page ---------------------------------
+
+.filter-title{
+display: none;
+}
+
+//ABOUT PAGE -----------------------------------
+
+.team-descrip{
+  flex-direction: column;
+  div{ 
+  width: 90%;
+  }
+
+  img{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.section-3-about{
+  text-align: center;
+  sl-button::part(base){
+    width: 140px;
+  }
+}
+
+}
