@@ -224,7 +224,7 @@ customElements.define('disk-app-header', class AppHeader extends LitElement {
     <sl-drawer class="app-side-menu" placement="left">
     <!-- ensures logo image takes user back to home screen -->
     <a href="/" @click="${this.menuClick}">
-      <img class="app-side-menu-logo" src="/images/logo.svg">
+      <img class="app-side-menu-logo" src="${App.apiBase}/images/logoLarge.svg">
     </a>
       <nav class="app-side-menu-items">
         <a href="/" @click="${this.menuClick}">Home</a>
