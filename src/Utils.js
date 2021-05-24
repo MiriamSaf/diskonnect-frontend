@@ -1,3 +1,4 @@
+//allows for our animation
 import gsap from 'gsap'
 
 //utilities that are helpful but dont fit into any other modules
