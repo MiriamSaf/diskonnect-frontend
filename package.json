@@ -1,7 +1,6 @@
 {
   "name": "diskonnect-spa-frontend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -19,10 +18,19 @@
     "scss": "^0.2.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.5",
     "sass": "^1.30.0"
   },
   "browserslist": [
     "since 2017-06"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiriamSaf/diskonnect-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MiriamSaf/diskonnect-frontend/issues"
+  },
+  "homepage": "https://github.com/MiriamSaf/diskonnect-frontend#readme",
+  "description": ""
 }
