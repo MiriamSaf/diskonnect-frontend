@@ -1924,7 +1924,7 @@ exports.default = void 0;
 var _litHtml = require("lit-html");
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n\n  <div class=\"app-splash\">\n    <div class=\"inner\">\n      <img class=\"app-logo\" src=\"/images/diskLogo.svg\" />\n      <sl-spinner style=\"font-size: 2em;\"></sl-spinner>\n    </div>\n  </div>\n"]);
+  const data = _taggedTemplateLiteral(["\n\n  <div class=\"app-splash\">\n    <div class=\"inner\">\n      <img class=\"app-logo\" src=\"/images/logo.svg\" />\n      <sl-spinner style=\"font-size: 2em;\"></sl-spinner>\n    </div>\n  </div>\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14149,57 +14149,7 @@ class GuideView {
 var _default = new GuideView();
 
 exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../UserAPI":"UserAPI.js","../../Toast":"Toast.js"}],"views/pages/blog.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("./../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("./../../Router");
-
-var _Auth = _interopRequireDefault(require("./../../Auth"));
-
-var _Utils = _interopRequireDefault(require("./../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <disk-app-header title=\"Blog\" user=\"", "\"></disk-app-header>\n      <div class=\"page-content\">        \n        <h1>Blog</h1>\n        <p>Page content ...</p>\n        \n      </div>      \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class TemplateView {
-  init() {
-    document.title = 'Blog';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  }
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new TemplateView();
-
-exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js"}],"views/pages/favouriteHikes.js":[function(require,module,exports) {
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../UserAPI":"UserAPI.js","../../Toast":"Toast.js"}],"views/pages/favouriteHikes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14304,59 +14254,7 @@ class favouriteHikes {
 var _default = new favouriteHikes();
 
 exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"views/pages/homeAdmin.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _App = _interopRequireDefault(require("./../../App"));
-
-var _litHtml = require("lit-html");
-
-var _Router = require("./../../Router");
-
-var _Auth = _interopRequireDefault(require("./../../Auth"));
-
-var _Utils = _interopRequireDefault(require("./../../Utils"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n      <disk-app-header title=\"HomeAdmin\" user=", "></disk-app-header>\n      \n      <div class=\"page-content\">\n        <h1 class=\"anim-in\">Hey ", "</h1>\n\n        <h3>Button example:</h3>\n        <sl-button class=\"anim-in\" @click=", ">View Profile</sl-button>\n        <p>&nbsp;</p>\n        <h3>Link example</h3>\n        <a href=\"/profile\" @click=", ">View Profile</a>\n        <br>\n        <a href=\"/test\" @click=", ">Test</a>\n        <br>\n        <sl-button @click=", ">Test</sl-button>\n      </div>\n     \n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-class HomeView {
-  init() {
-    console.log('HomeView.init');
-    document.title = 'HomeAdmin';
-    this.render();
-
-    _Utils.default.pageIntroAnim();
-  } //render shows whats visible
-
-
-  render() {
-    const template = (0, _litHtml.html)(_templateObject(), JSON.stringify(_Auth.default.currentUser), _Auth.default.currentUser.firstName, () => (0, _Router.gotoRoute)('/profile'), _Router.anchorRoute, _Router.anchorRoute, () => (0, _Router.gotoRoute)('/test'));
-    (0, _litHtml.render)(template, _App.default.rootEl);
-  }
-
-}
-
-var _default = new HomeView();
-
-exports.default = _default;
-},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js"}],"HikeAPI.js":[function(require,module,exports) {
+},{"./../../App":"App.js","lit-html":"../node_modules/lit-html/lit-html.js","./../../Router":"Router.js","./../../Auth":"Auth.js","./../../Utils":"Utils.js","./../../Toast":"Toast.js","./../../UserAPI":"UserAPI.js"}],"HikeAPI.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14722,11 +14620,7 @@ var _editProfile = _interopRequireDefault(require("./views/pages/editProfile"));
 
 var _guide = _interopRequireDefault(require("./views/pages/guide"));
 
-var _blog = _interopRequireDefault(require("./views/pages/blog"));
-
 var _favouriteHikes = _interopRequireDefault(require("./views/pages/favouriteHikes"));
-
-var _homeAdmin = _interopRequireDefault(require("./views/pages/homeAdmin"));
 
 var _hikes = _interopRequireDefault(require("./views/pages/hikes"));
 
@@ -14739,14 +14633,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const routes = {
   //every VIEW has a route to go to
   //if someoone types in following views take them to this route
+  //eg if you go to /signin run signinView
   '/': _home.default,
   '404': _.default,
-  //if you go to /signin run signinView
   '/signin': _signin.default,
-  '/homeAdmin': _homeAdmin.default,
   '/signup': _signup.default,
   '/about': _about.default,
-  '/blog': _blog.default,
   '/profile': _profile.default,
   '/favouriteHikes': _favouriteHikes.default,
   '/editProfile': _editProfile.default,
@@ -14808,7 +14700,7 @@ function anchorRoute(e) {
   const pathname = e.target.closest('a').pathname;
   AppRouter.gotoRoute(pathname);
 }
-},{"./views/pages/home":"views/pages/home.js","./views/pages/about":"views/pages/about.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/blog":"views/pages/blog.js","./views/pages/favouriteHikes":"views/pages/favouriteHikes.js","./views/pages/homeAdmin":"views/pages/homeAdmin.js","./views/pages/hikes":"views/pages/hikes.js","./views/pages/newDiskonnectHike":"views/pages/newDiskonnectHike.js"}],"App.js":[function(require,module,exports) {
+},{"./views/pages/home":"views/pages/home.js","./views/pages/about":"views/pages/about.js","./views/pages/404":"views/pages/404.js","./views/pages/signin":"views/pages/signin.js","./views/pages/signup":"views/pages/signup.js","./views/pages/profile":"views/pages/profile.js","./views/pages/editProfile":"views/pages/editProfile.js","./views/pages/guide":"views/pages/guide.js","./views/pages/favouriteHikes":"views/pages/favouriteHikes.js","./views/pages/hikes":"views/pages/hikes.js","./views/pages/newDiskonnectHike":"views/pages/newDiskonnectHike.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16651,7 +16543,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-pink);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n        font-family: var(--base-heading-font);\n      }\n      \n\n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-side-menu-items{\n        /* gives breathing space on top of menu items */\n        margin-top: 1em;\n      }\n      \n      /*links on menu sidebar */\n      .app-side-menu-items a {\n        display: block;\n        padding: .5em;\n        text-decoration: none;\n        font-size: 1.5em;\n        color: var(--app-header-txt-color);\n        font-family: var(--base-heading-font);\n        /*style for hover state beginning\n        adapted from\n        \"Having Fun With Link Hover Effects | CSS-Tricks\". 2021. CSS-Tricks. \n        https://css-tricks.com/having-fun-with-link-hover-effects/. */\n        background:\n        linear-gradient(\n          to bottom, var(--brand-pink) 0%,\n          var(--brand-pink) 100%\n        );\n        background-position: 0 100%;\n        background-repeat: repeat-x;\n        background-size: 0px 0px;\n        color: #000;\n        text-decoration: none;\n        transition: background-size .2s;\n      }\n\n      /*diskonnect logo */\n      .app-side-menu-logo {\n        width: 133px;\n        margin-bottom: -5em;\n        position: absolute;\n        top: -0.2em;\n        left: 1.5em;\n      }\n\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n      }\n\n      /* styles the avatar image*/\n      .avatar-img::part(base){\n        background-color: var(--heading-color);\n        color:  var(--brand-pink);\n        margin-right: 0.2em;\n      }\n\n      /* active nav links */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n      /* nav active menu items expand on hover state */\n      .app-side-menu-items a:hover{\n        background-size: 4px 50px;\n      }\n     \n\n\n      /* RESPONSIVE - MOBILE ------------------- */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        ", "\n        <slot></slot>\n      </div>\n\n      <nav class=\"app-top-nav\">\n        \n         <!-- should only show for hairdressers-->\n       ", "    \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar class =\"avatar-img\" style=\"--size: 42px;\" image=", "></sl-avatar> <!--", "-->\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <!-- diskonnect app slideout right side menu -->\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n    <!-- ensures logo image takes user back to home screen -->\n    <a href=\"/\" @click=\"", "\">\n      <img class=\"app-side-menu-logo\" src=\"", "/images/logoLarge.svg\">\n    </a>\n      <nav class=\"app-side-menu-items\">\n        <a href=\"/\" @click=\"", "\">Home</a>\n        ", "\n        <a class = \"menu-item\" href=\"/hike\" @click=\"", "\">Hikes</a>\n        <a href=\"/favouriteHikes\" @click=\"", "\">Favourite Hikes</a>   \n        <a href=\"/about\" @click=\"", "\">About</a>\n        <a href=\"/blog\" @click=\"", "\">Blog</a>\n        <a href=\"/profile\" @click=\"", "\">Profile</a>     \n        <a href=\"#\" @click=\"", "\">Sign Out</a>\n      </nav>  \n    </sl-drawer>\n    "]);
+  const data = _taggedTemplateLiteral(["\n    <style>      \n      * {\n        box-sizing: border-box;\n      }\n      .app-header {\n        background: var(--brand-pink);\n        position: fixed;\n        top: 0;\n        right: 0;\n        left: 0;\n        height: var(--app-header-height);\n        color: #fff;\n        display: flex;\n        z-index: 9;\n        box-shadow: 4px 0px 10px rgba(0,0,0,0.2);\n        align-items: center;\n        font-family: var(--base-heading-font);\n      }\n      \n\n      .app-header-main {\n        flex-grow: 1;\n        display: flex;\n        align-items: center;\n      }\n\n      .app-header-main::slotted(h1){\n        color: #fff;\n      }\n\n      .app-logo a {\n        color: #fff;\n        text-decoration: none;\n        font-weight: bold;\n        font-size: 1.2em;\n        padding: .6em;\n        display: inline-block;        \n      }\n\n      .app-logo img {\n        width: 90px;\n      }\n      \n      .hamburger-btn::part(base) {\n        color: var(--app-header-txt-color);\n      }\n\n      .app-top-nav {\n        display: flex;\n        height: 100%;\n        align-items: center;\n      }\n\n      .app-top-nav a {\n        display: inline-block;\n        padding: .8em;\n        text-decoration: none;\n        color: var(--app-header-txt-color);\n      }\n\n      .app-side-menu-items{\n        /* gives breathing space on top of menu items */\n        margin-top: 1em;\n      }\n      \n      /*links on menu sidebar */\n      .app-side-menu-items a {\n        display: block;\n        padding: .5em;\n        text-decoration: none;\n        font-size: 1.6em;\n        color: var(--app-header-txt-color);\n        font-family: var(--base-heading-font);\n        /*style for hover state beginning\n        adapted from\n        \"Having Fun With Link Hover Effects | CSS-Tricks\". 2021. CSS-Tricks. \n        https://css-tricks.com/having-fun-with-link-hover-effects/. */\n        background:\n        linear-gradient(\n          to bottom, var(--brand-pink) 0%,\n          var(--brand-pink) 100%\n        );\n        background-position: 0 100%;\n        background-repeat: repeat-x;\n        background-size: 0px 0px;\n        color: #000;\n        text-decoration: none;\n        transition: background-size .2s;\n      }\n\n      /*diskonnect logo */\n      .app-side-menu-logo {\n        width: 133px;\n        margin-bottom: -5em;\n        position: absolute;\n        top: -0.2em;\n        left: 1.5em;\n      }\n\n      .page-title {\n        color: var(--app-header-txt-color);\n        margin-right: 0.5em;\n        font-size: var(--app-header-title-font-size);\n      }\n\n      /* styles the avatar image*/\n      .avatar-img::part(base){\n        background-color: var(--heading-color);\n        color:  var(--brand-pink);\n        margin-right: 0.2em;\n      }\n\n      /* active nav links */\n      .app-top-nav a.active,\n      .app-side-menu-items a.active {\n        font-weight: bold;\n      }\n      /* nav active menu items expand on hover state */\n      .app-side-menu-items a:hover{\n        background-size: 4px 50px;\n      }\n     \n\n\n      /* RESPONSIVE - MOBILE ------------------- */\n      @media all and (max-width: 768px){       \n        \n        .app-top-nav {\n          display: none;\n        }\n      }\n\n    </style>\n\n    <header class=\"app-header\">\n      <sl-icon-button class=\"hamburger-btn\" name=\"list\" @click=\"", "\" style=\"font-size: 1.5em;\"></sl-icon-button>       \n      \n      <div class=\"app-header-main\">\n        ", "\n        <slot></slot>\n      </div>\n\n      <nav class=\"app-top-nav\">\n        \n         <!-- should only show for hairdressers-->\n       ", "    \n        <sl-dropdown>\n          <a slot=\"trigger\" href=\"#\" @click=\"", "\">\n            <sl-avatar class =\"avatar-img\" style=\"--size: 42px;\" image=", "></sl-avatar> <!--", "-->\n          </a>\n          <sl-menu>            \n            <sl-menu-item @click=\"", "\">Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Edit Profile</sl-menu-item>\n            <sl-menu-item @click=\"", "\">Sign Out</sl-menu-item>\n          </sl-menu>\n        </sl-dropdown>\n      </nav>\n    </header>\n\n    <!-- diskonnect app slideout right side menu -->\n    <sl-drawer class=\"app-side-menu\" placement=\"left\">\n    <!-- ensures logo image takes user back to home screen -->\n    <a href=\"/\" @click=\"", "\">\n      <img class=\"app-side-menu-logo\" src=\"", "/images/logoLarge.svg\">\n    </a>\n      <nav class=\"app-side-menu-items\">\n        <a href=\"/\" @click=\"", "\">Home</a>\n        ", "\n        <a class = \"menu-item\" href=\"/hike\" @click=\"", "\">Hikes</a>\n        <a href=\"/favouriteHikes\" @click=\"", "\">Favourite Hikes</a>   \n        <a href=\"/about\" @click=\"", "\">About</a>\n        <a href=\"/profile\" @click=\"", "\">Profile</a>     \n        <a href=\"#\" @click=\"", "\">Sign Out</a>\n      </nav>  \n    </sl-drawer>\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16716,7 +16608,7 @@ customElements.define('disk-app-header', class AppHeader extends _litElement.Lit
 
 
   render() {
-    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, this.title ? (0, _litElement.html)(_templateObject2(), this.title) : "", this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject3(), _Router.anchorRoute) : '', e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), this.menuClick, _App.default.apiBase, this.menuClick, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject4(), this.menuClick) : '', this.menuClick, this.menuClick, this.menuClick, this.menuClick, this.menuClick, () => _Auth.default.signOut());
+    return (0, _litElement.html)(_templateObject(), this.hamburgerClick, this.title ? (0, _litElement.html)(_templateObject2(), this.title) : "", this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject3(), _Router.anchorRoute) : '', e => e.preventDefault(), this.user && this.user.avatar ? "".concat(_App.default.apiBase, "/images/").concat(this.user.avatar) : '', this.user && this.user.firstName, () => (0, _Router.gotoRoute)('/profile'), () => (0, _Router.gotoRoute)('/editProfile'), () => _Auth.default.signOut(), this.menuClick, _App.default.apiBase, this.menuClick, this.user.accessLevel == 2 ? (0, _litElement.html)(_templateObject4(), this.menuClick) : '', this.menuClick, this.menuClick, this.menuClick, this.menuClick, () => _Auth.default.signOut());
   }
 
 });
@@ -16979,7 +16871,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60380" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62096" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

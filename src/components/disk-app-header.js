@@ -127,7 +127,7 @@ customElements.define('disk-app-header', class AppHeader extends LitElement {
         display: block;
         padding: .5em;
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.6em;
         color: var(--app-header-txt-color);
         font-family: var(--base-heading-font);
         /*style for hover state beginning
@@ -234,7 +234,6 @@ customElements.define('disk-app-header', class AppHeader extends LitElement {
         <a class = "menu-item" href="/hike" @click="${this.menuClick}">Hikes</a>
         <a href="/favouriteHikes" @click="${this.menuClick}">Favourite Hikes</a>   
         <a href="/about" @click="${this.menuClick}">About</a>
-        <a href="/blog" @click="${this.menuClick}">Blog</a>
         <a href="/profile" @click="${this.menuClick}">Profile</a>     
         <a href="#" @click="${() => Auth.signOut()}">Sign Out</a>
       </nav>  

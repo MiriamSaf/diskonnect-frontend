@@ -7,9 +7,7 @@ import signupView from './views/pages/signup'
 import profileView from './views/pages/profile'
 import editProfileView from './views/pages/editProfile'
 import GuideView from './views/pages/guide'
-import blog from './views/pages/blog'
 import favouriteHikes from './views/pages/favouriteHikes'
-import homeAdmin from './views/pages/homeAdmin'
 import Hikes from './views/pages/hikes'
 import newHike from './views/pages/newDiskonnectHike'
 
@@ -17,14 +15,12 @@ import newHike from './views/pages/newDiskonnectHike'
 const routes = {
 	//every VIEW has a route to go to
 	//if someoone types in following views take them to this route
+	//eg if you go to /signin run signinView
 	'/': homeView,	
 	'404' : fourOFourView,
-	//if you go to /signin run signinView
 	'/signin': signinView,
-	'/homeAdmin': homeAdmin,
 	'/signup': signupView,
 	'/about' : aboutView,
-	'/blog' : blog,
 	'/profile': profileView,
 	'/favouriteHikes': favouriteHikes,
 	'/editProfile': editProfileView,
