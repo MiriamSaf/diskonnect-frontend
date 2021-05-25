@@ -5,7 +5,6 @@ import Toast from './Toast'
 class UserAPI {
   
  //when update user pass in userid, userData and the type is form or data
- 
 async updateUser(userId, userData, dataType = 'form'){
   // validate
   if(!userId || !userData) return
