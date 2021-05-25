@@ -1,10 +1,11 @@
 import {html } from 'lit-html'
 
+
 const splash = html`
 
   <div class="app-splash">
     <div class="inner">
-      <img class="app-logo" src="/images/diskLogo.png" />
+      <img class="app-logo" src="/images/diskLogo.svg" />
       <sl-spinner style="font-size: 2em;"></sl-spinner>
     </div>
   </div>

@@ -34,7 +34,7 @@ class SignInView {
     const template = html`      
       <div class="page-content page-centered">
         <div class="signinup-box">
-          <img class="signinup-logo" src="/images/logo.svg">          
+          <img class="signinup-logo" src="${App.apiBase}/images/logoLarge.svg">          
           <sl-form class="form-signup dark-theme" @sl-submit=${this.signInSubmitHandler}>          
             <div class="input-group">
               <sl-input class = "sign-in-input" name="email" type="email" placeholder="Email" required></sl-input>
