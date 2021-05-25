@@ -34,7 +34,7 @@ class HomeView {
 
           </div><!-- close home box div-->
 
-          <img class ="home-pic-box" src="${App.apiBase}/images/homeImage.jpg" alt ="man hiking on cliff - looking at water below">
+          <img class ="home-pic-box" src="${App.apiBase}/images/home.jpg" alt ="man hiking on cliff - looking at water below">
         </div><!-- close pg container -->
         
         <!-- footer for bottom of pg -->

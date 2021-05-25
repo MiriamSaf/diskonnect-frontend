@@ -104,7 +104,10 @@ customElements.define('va-hike', class Diskonnect extends LitElement {
             <a href = 'https://www.google.com/maps/' target="_blank"><p class="Location">${this.location}</p></a>
             <sl-rating class = "star-rating" readonly value="${this.stars}"></sl-rating>
             <p class="hikeDistance">${this.hikeDistance} km</p>
-            <p class="time"><span>${this.time}</span> mins</p>
+            <!--if it is less than an hour show in minutes else show in hours by dividing by 60 </p>-->
+            ${this.time < 60 ? html 
+            `<p class="time"><span>${this.time}</span> mins</p>`
+            : `${this.time / 60} hours`}    
             <p class="skillLevel"></span>Skill Level: ${this.skillLevel}</p>
             <sl-button @click=${this.addFavHandler.bind(this)}>
             <sl-icon slot="prefix" name="heart-fill"></sl-icon>

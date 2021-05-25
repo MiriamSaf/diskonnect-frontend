@@ -151,9 +151,15 @@ customElements.define('disk-app-header', class AppHeader extends LitElement {
       .app-side-menu-logo {
         width: 133px;
         margin-bottom: -5em;
+        transition: transform .2s ease-in-out; /* Animation to enlarge on hover */
         position: absolute;
         top: -0.2em;
         left: 1.5em;
+      }
+
+      /* logo on hover grow slightly larger */
+      .app-side-menu-logo:hover{
+        transform: scale(1.1);  
       }
 
       .page-title {

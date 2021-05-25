@@ -175,6 +175,10 @@ a {
   margin-top: 5px;
 }
 
+.stars-section {
+  z-index: 9;
+}
+
 .disk-dialog {
   --width: 70%;
 }
@@ -403,6 +407,7 @@ a {
 .skill-lev-dropdown,
 .star-tablet-dropdown {
     display: block;
+    z-index: 9;
   }
 
   .length-full-screen,
@@ -470,7 +475,6 @@ a {
 }
 .input-group {
   margin-bottom: 0.8em;
-  max-width: 400px;
 }
 
 .page-form {

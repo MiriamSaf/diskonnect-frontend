@@ -204,9 +204,9 @@ clearFilters(){
           <!-- stars -->
           <div class = "stars-section">
           <strong>Stars</strong>
-          <sl-dropdown distance="5">
+          <sl-dropdown distance="1" style = "z-index:9">
             <sl-button class ="filter-btn" size = "small" slot="trigger" style ="margin-left: 0.5em;" caret><strong>Stars</strong></sl-button>
-            <sl-menu>
+            <sl-menu style = "z-index:9">
               <sl-menu-item data-field ="stars" data-match="1" @click=${this.handleFilterBtn.bind(this)}>1</sl-menu-item>
               <sl-menu-item data-field ="stars" data-match="2" @click=${this.handleFilterBtn.bind(this)}>2</sl-menu-item>
               <sl-menu-item data-field ="stars" data-match="3" @click=${this.handleFilterBtn.bind(this)}>3</sl-menu-item>
@@ -219,7 +219,7 @@ clearFilters(){
             <!-- star 2 - dropdown (for responsiveness) -->
           <div class = "star-tablet-dropdown">
           <br>
-          <sl-dropdown class = "star-btn-tablet" distance="5">
+          <sl-dropdown class = "star-btn-tablet" distance="5" >
             <sl-button class ="filter-btn" size = "small" slot="trigger" style ="margin-left: 0.5em;" caret><strong>Stars</strong></sl-button>
             <sl-menu>
             <sl-menu-item data-field ="stars" data-match="1" @click=${this.handleFilterBtn.bind(this)}>1</sl-menu-item>

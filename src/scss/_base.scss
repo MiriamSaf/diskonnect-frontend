@@ -167,6 +167,10 @@ a {
   margin-top: 5px;
 }
 
+.stars-section{
+  z-index: 9;
+}
+
 //diskonnect hike dialog
 .disk-dialog {
   --width: 70%;
@@ -438,6 +442,7 @@ a {
   .skill-lev-dropdown, 
   .star-tablet-dropdown{
     display: block;
+    z-index: 9;
   }
   
   //hide full screen length/ time
