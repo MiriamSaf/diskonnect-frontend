@@ -12,7 +12,6 @@ class GuideView {
     this.render()    
     Utils.pageIntroAnim()
     this.updateCurrentUser()
-    //console.log('in init function - guide')
   }
 
   //updates the newUser to false so that the guide page will not show more than once

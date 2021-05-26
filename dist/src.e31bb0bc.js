@@ -14121,7 +14121,7 @@ class GuideView {
 
     _Utils.default.pageIntroAnim();
 
-    this.updateCurrentUser(); //console.log('in init function - guide')
+    this.updateCurrentUser();
   } //updates the newUser to false so that the guide page will not show more than once
 
 
@@ -14227,7 +14227,7 @@ class favouriteHikes {
     this.getFavHikes();
 
     _Utils.default.favExtraAnim();
-  } //get favourite haircuts
+  } //get favourite hike
 
 
   async getFavHikes() {
@@ -14721,9 +14721,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 class App {
   constructor() {
     this.name = "Diskonnect";
-    this.version = "1.0.0";
-    this.apiBase = 'https://diskonnect-backend.herokuapp.com'; //'http://localhost:3000'
-    //save root element to this.rootEl
+    this.version = "1.0.0"; //backend heroku 
+
+    this.apiBase = 'https://diskonnect-backend.herokuapp.com'; //save root element to this.rootEl
 
     this.rootEl = document.getElementById("root");
     this.version = "1.0.0";
@@ -16652,7 +16652,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  const data = _taggedTemplateLiteral(["\n\n        <style>\n        .wrap {\n            display: flex;\n        }\n        .image {\n            width: 50%;\n        }\n        .image img {\n            width: 100%;\n        }\n        .content {\n            padding-left: 1em;\n        }\n\n        .star-rating::part(base){\n      /* changes star color */\n      --symbol-color-active: var(--brand-color);\n    }\n      \n        </style>\n        <div class=\"wrap\">\n        <div class=\"image\">\n            <img src=\"", "/images/", "\" alt=\"", "\" />\n        </div>\n        <div class=\"content\">\n            <h1>", "</h1>\n            <h3>", "</h3>\n            <a href = 'https://www.google.com/maps/' target=\"_blank\"><p class=\"Location\">", "</p></a>\n            <sl-rating class = \"star-rating\" readonly value=\"", "\"></sl-rating>\n            <p class=\"hikeDistance\">", " km</p>\n            <!--if it is less than an hour show in minutes else show in hours by dividing by 60 </p>-->\n            ", "    \n            <p class=\"skillLevel\"></span>Skill Level: ", "</p>\n            <sl-button @click=", ">\n            <sl-icon slot=\"prefix\" name=\"heart-fill\"></sl-icon>\n            Add to Favourites\n            </sl-button>\n        </div>\n        </div>\n        "]);
+  const data = _taggedTemplateLiteral(["\n\n        <style>\n        .wrap {\n            display: flex;\n        }\n        .image {\n            width: 50%;\n        }\n        .image img {\n            width: 100%;\n        }\n        .content {\n            padding-left: 1em;\n        }\n\n        .star-rating::part(base){\n      /* changes star color */\n      --symbol-color-active: var(--brand-color);\n    }\n      \n        </style>\n        <div class=\"wrap\">\n        <div class=\"image\">\n            <img src=\"", "/images/", "\" alt=\"", "\" />\n        </div>\n        <div class=\"content\">\n            <h1>", "</h1>\n            <h3>", "</h3>\n            <a href = 'https://www.google.com/maps/' target=\"_blank\"><p class=\"Location\">", "</p></a>\n            <sl-rating class = \"star-rating\" readonly value=\"", "\"></sl-rating>\n            <p class=\"hikeDistance\">", " km</p>\n            <!--if it is less than an hour show in minutes else show in hours by dividing by 60 -->\n            ", "    \n            <p class=\"skillLevel\"></span>Skill Level: ", "</p>\n            <sl-button @click=", ">\n            <sl-icon slot=\"prefix\" name=\"heart-fill\"></sl-icon>\n            Add to Favourites\n            </sl-button>\n        </div>\n        </div>\n        "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16667,13 +16667,13 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 //need lit-element library and import router to navigate
 //auth if need to access current user
 //import app if need app header
-//create a new element and call it va-haircut
+//create a new element and call it va-hike
 customElements.define('va-hike', class Diskonnect extends _litElement.LitElement {
   //constructor to set up obj or set up data etc
   constructor() {
     //super refers to inheriting litElement class
     super();
-  } //define attribute and say its a property eg title = ""
+  } //define attribute and say its a property
 
 
   static get properties() {
@@ -16881,7 +16881,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62096" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49826" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

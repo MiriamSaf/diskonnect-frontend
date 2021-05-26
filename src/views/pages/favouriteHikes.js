@@ -18,7 +18,7 @@ class favouriteHikes {
   }
 
   
-  //get favourite haircuts
+  //get favourite hike
   async getFavHikes(){
     try {
       //will return current user and redeclare the fav hikes to our current user

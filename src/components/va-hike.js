@@ -12,7 +12,7 @@ import UserAPI from './../UserAPI'
 //import app if need app header
 
 
-//create a new element and call it va-haircut
+//create a new element and call it va-hike
 customElements.define('va-hike', class Diskonnect extends LitElement {
     //constructor to set up obj or set up data etc
     constructor(){
@@ -20,7 +20,7 @@ customElements.define('va-hike', class Diskonnect extends LitElement {
     super()    
   }
 
-  //define attribute and say its a property eg title = ""
+  //define attribute and say its a property
   static get properties(){
     return {
       id: {
@@ -104,7 +104,7 @@ customElements.define('va-hike', class Diskonnect extends LitElement {
             <a href = 'https://www.google.com/maps/' target="_blank"><p class="Location">${this.location}</p></a>
             <sl-rating class = "star-rating" readonly value="${this.stars}"></sl-rating>
             <p class="hikeDistance">${this.hikeDistance} km</p>
-            <!--if it is less than an hour show in minutes else show in hours by dividing by 60 </p>-->
+            <!--if it is less than an hour show in minutes else show in hours by dividing by 60 -->
             ${this.time < 60 ? html 
             `<p class="time"><span>${this.time}</span> mins</p>`
             : `${this.time / 60} hours`}    

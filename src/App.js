@@ -8,8 +8,8 @@ class App {
   constructor(){
     this.name = "Diskonnect"
     this.version = "1.0.0"
+    //backend heroku 
     this.apiBase = 'https://diskonnect-backend.herokuapp.com'
-    //'http://localhost:3000'
     //save root element to this.rootEl
     this.rootEl = document.getElementById("root")
     this.version = "1.0.0"
